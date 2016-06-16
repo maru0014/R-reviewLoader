@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>RreviewLoader</title>
+    <!-- jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <!-- xdomainajax -->
+    <script src="../js/jquery.xdomainajax.js" type="text/javascript"></script>
+    <!-- 楽天商品検索APIから情報を取得 -->
+    <script>
+        //親フレームのURLを取得
+        refererUrl = document.referrer;
+
+        $.get(refererUrl, function(data) {
+            var reviewLinkHref = $(data.responseText).find('.review a').prop('href'); //レビューを書くリンク取得
+            var itemNumber = reviewLinkHref.replace(/.+?_(.+?_.+?)_.*/g, '$1'); //商品コードを取得
+
+            //レビュー5のページを取得
+            var url1 = 'http://review.rakuten.co.jp/item/1/' + itemNumber + '/1.1/ev5-sort6/?l2-id=review_PC_il_search_narrowing';
+            //レビュー4のページを取得
+            var url2 = 'http://review.rakuten.co.jp/item/1/' + itemNumber + '/1.1/ev4-sort6/?l2-id=review_PC_il_search_narrowing';
+
+            //<dvi id="reviewData1">にレビュー5データを記述
+            $.get(url1, function(data) {
+                var content1 = $(data.responseText).find('.revRvwUserSecCnt').html(); //取得領域の指定
+                $("#reviewData1").html(content1); //表示領域の指定
+            });
+            //<dvi id="reviewData2">にレビュー4データを記述
+            $.get(url2, function(data) {
+                var content2 = $(data.responseText).find('.revRvwUserSecCnt').html(); //取得領域の指定
+                $("#reviewData2").html(content2); //表示領域の指定
+            });
+        });
+    </script>
+    <link rel="style.css">
+    <base target="_blank">
+</head>
+
+<body>
+    <div id="reviewData1"></div>
+    <div id="reviewData2"></div>
+</body>
+
+</html>
