@@ -1,2128 +1,2130 @@
+/*****************
+楽天市場みんなのレビュー CSS
+******************/
+body {
+    font-size: 0.8em;
+    border: 1px #ccc solid;
+}
 
-        body {
-            font-size: 0.8em;
-            border: 1px #ccc solid;
-        }
+.revUserEntryAns {
+    display: none;
+}
 
-        .revUserEntryAns {
-            display: none;
-        }
+.revTagLine {
+    text-align: right;
+    font-size: 90%;
+    color: #999999;
+    margin: 5px 8px;
+}
 
-        .revTagLine {
-            text-align: right;
-            font-size: 90%;
-            color: #999999;
-            margin: 5px 8px;
-        }
-
-        .revItemHdr .revNotFound {
-            text-align: center;
-            font-size: 200%;
-            font-weight: bold;
-            color: #BF0000;
-            margin: 5px 5px;
-            padding-bottom: 50px;
-        }
-        /*--------------------------
+.revItemHdr .revNotFound {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    color: #BF0000;
+    margin: 5px 5px;
+    padding-bottom: 50px;
+}
+/*--------------------------
 #revFloatingHeader
 ----------------------------*/
 
-        #revhideclass {
-            background: #bf0000;
-            height: 49px;
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            border-top: 1px solid #cccccc;
-            min-width: 950px;
-            width: expression(document.body.clientWidth < 952? "950px": "auto");
-            overflow: hidden;
-            zoom: 1;
-        }
+#revhideclass {
+    background: #bf0000;
+    height: 49px;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #cccccc;
+    min-width: 950px;
+    width: expression(document.body.clientWidth < 952? "950px": "auto");
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revFloatingHd {
-            height: 41px;
-            margin: 2px 15px;
-            padding: 2px 10px;
-            background: #ffffff;
-            overflow: hidden;
-            zoom: 1;
-            font-size: 90%;
-        }
+.revFloatingHd {
+    height: 41px;
+    margin: 2px 15px;
+    padding: 2px 10px;
+    background: #ffffff;
+    overflow: hidden;
+    zoom: 1;
+    font-size: 90%;
+}
 
-        .revFltHdItem {
-            float: left;
-            height: 50px;
-            position: relative;
-        }
+.revFltHdItem {
+    float: left;
+    height: 50px;
+    position: relative;
+}
 
-        .revFltHdName {
-            position: absolute;
-            top: 50%;
-            margin-top: -0.8em;
-            white-space: nowrap;
-            padding: 0 0 0 50px;
-            vertical-align: middle;
-            font-size: 115%;
-        }
+.revFltHdName {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.8em;
+    white-space: nowrap;
+    padding: 0 0 0 50px;
+    vertical-align: middle;
+    font-size: 115%;
+}
 
-        .revFltHdItem li {
-            float: left;
-        }
+.revFltHdItem li {
+    float: left;
+}
 
-        .revFltHdDetail {
-            margin: 10px 0 0 0;
-            float: right;
-            height: 50px;
-            position: relative;
-        }
+.revFltHdDetail {
+    margin: 10px 0 0 0;
+    float: right;
+    height: 50px;
+    position: relative;
+}
 
-        .revFltHdDetail li {
-            float: left;
-            margin: 0 0 0 10px;
-        }
+.revFltHdDetail li {
+    float: left;
+    margin: 0 0 0 10px;
+}
 
-        .revFltHdDetail .revFltHdStar {
-            padding: 4px 0 0 0;
-        }
+.revFltHdDetail .revFltHdStar {
+    padding: 4px 0 0 0;
+}
 
-        .revFltHdDetail .revFltHdStar img {
-            vertical-align: middle;
-            padding-bottom: 6px;
-        }
+.revFltHdDetail .revFltHdStar img {
+    vertical-align: middle;
+    padding-bottom: 6px;
+}
 
-        .revFltHdDetail .revFltHdStar .revFltHdNum {
-            margin-left: 5px;
-            color: #bf0000;
-            font-weight: bold;
-            font-size: 150%;
-        }
+.revFltHdDetail .revFltHdStar .revFltHdNum {
+    margin-left: 5px;
+    color: #bf0000;
+    font-weight: bold;
+    font-size: 150%;
+}
 
-        .revFltHdImg {
-            display: inline-block;
-            position: relative;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            vertical-align: middle;
-            text-align: center;
-        }
+.revFltHdImg {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+}
 
-        .revFltHdImg img {
-            max-width: 40px;
-            max-height: 40px;
-            _width: 40px;
-            vertical-align: middle;
-            text-align: center;
-        }
+.revFltHdImg img {
+    max-width: 40px;
+    max-height: 40px;
+    _width: 40px;
+    vertical-align: middle;
+    text-align: center;
+}
 
-        .revFltHdPrice {
-            padding: 5px 0 0 0;
-            font-size: 90%;
-        }
+.revFltHdPrice {
+    padding: 5px 0 0 0;
+    font-size: 90%;
+}
 
-        .revFltHdPriceNum {
-            padding: 0 0 0 3px;
-            font-size: 150%;
-            color: #bf0000;
-        }
-        /*--------------------------
+.revFltHdPriceNum {
+    padding: 0 0 0 3px;
+    font-size: 150%;
+    color: #bf0000;
+}
+/*--------------------------
 #revItemSec / #revShopSec
 ----------------------------*/
 
-        #revItemSec {
-            margin: 0 0 30px 0;
-            overflow: hidden;
-            zoom: 1;
-        }
+#revItemSec {
+    margin: 0 0 30px 0;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revShopSec {
-            margin: 0 0 30px 0;
-        }
-        /* .revItemHdr */
+#revShopSec {
+    margin: 0 0 30px 0;
+}
+/* .revItemHdr */
 
-        .revItemHdr {
-            width: 100%;
-            margin: 0 0 20px;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revItemHdr {
+    width: 100%;
+    margin: 0 0 20px;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revItemTtl {
-            width: 100%;
-            margin: 0 10px 0 10px;
-            float: left;
-            font-size: 120%;
-            line-height: 1.4em;
-            font-weight: bold;
-            display: block;
-        }
+.revItemTtl {
+    width: 100%;
+    margin: 0 10px 0 10px;
+    float: left;
+    font-size: 120%;
+    line-height: 1.4em;
+    font-weight: bold;
+    display: block;
+}
 
-        #revItemSec .revItemTtl {
-            margin-right: -278px;
-        }
+#revItemSec .revItemTtl {
+    margin-right: -278px;
+}
 
-        #revShopSec .revItemTtl {
-            margin-right: -300px;
-            overflow: hidden;
-            zoom: 1;
-        }
+#revShopSec .revItemTtl {
+    margin-right: -300px;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revItemTtl span {
-            display: block;
-            line-height: 1.6em;
-        }
+.revItemTtl span {
+    display: block;
+    line-height: 1.6em;
+}
 
-        #revItemSec .revItemTtl span {
-            margin-right: 278px;
-        }
+#revItemSec .revItemTtl span {
+    margin-right: 278px;
+}
 
-        #revShopSec .revItemTtl span {
-            margin-right: 300px;
-        }
+#revShopSec .revItemTtl span {
+    margin-right: 300px;
+}
 
-        #revShopSec .revItemTtl .revItemTtlImg {
-            float: left;
-            margin: 0;
-        }
+#revShopSec .revItemTtl .revItemTtlImg {
+    float: left;
+    margin: 0;
+}
 
-        #revShopSec .revItemTtl .shopname {
-            margin: 0 0 0 20px;
-        }
+#revShopSec .revItemTtl .shopname {
+    margin: 0 0 0 20px;
+}
 
-        #revShopSec .revItemTtl .revItemTtlTxt {
-            padding-top: 5px;
-        }
+#revShopSec .revItemTtl .revItemTtlTxt {
+    padding-top: 5px;
+}
 
-        .revFctBtn {
-            float: right;
-            overflow: hidden;
-            zoom: 1;
-            display: block;
-        }
+.revFctBtn {
+    float: right;
+    overflow: hidden;
+    zoom: 1;
+    display: block;
+}
 
-        #revItemSec .revFctBtn {
-            width: 258px;
-        }
+#revItemSec .revFctBtn {
+    width: 258px;
+}
 
-        #revShopSec .revFctBtn {
-            width: 280px;
-        }
+#revShopSec .revFctBtn {
+    width: 280px;
+}
 
-        .revFctBtn li {
-            float: left;
-        }
+.revFctBtn li {
+    float: left;
+}
 
-        .revFavBtn a {
-            margin: 0 10px 0 0;
-            display: block;
-        }
+.revFavBtn a {
+    margin: 0 10px 0 0;
+    display: block;
+}
 
-        #revItemSec .revFavBtn a {
-            width: 128px;
-        }
+#revItemSec .revFavBtn a {
+    width: 128px;
+}
 
-        #revShopSec .revFavBtn a {
-            width: 150px;
-        }
+#revShopSec .revFavBtn a {
+    width: 150px;
+}
 
-        .revRvwBtn a {
-            width: 120px;
-            display: block;
-        }
-        /* .revItemMain */
+.revRvwBtn a {
+    width: 120px;
+    display: block;
+}
+/* .revItemMain */
 
-        .revItemMain {
-            width: 100%;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revItemMain {
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revItemMainDsc {
-            width: 100%;
-            float: right;
-            margin-left: -200px;
-        }
+.revItemMainDsc {
+    width: 100%;
+    float: right;
+    margin-left: -200px;
+}
 
-        #revItemSec .revItemMainDscInr {}
+#revItemSec .revItemMainDscInr {}
 
-        #revShopSec .revItemMainDscInr {
-            width: 100%;
-            float: left;
-            display: block;
-        }
+#revShopSec .revItemMainDscInr {
+    width: 100%;
+    float: left;
+    display: block;
+}
 
-        .revDscCnt,
-        .revCtgChart {
-            overflow: hidden;
-            zoom: 1;
-        }
+.revDscCnt,
+.revCtgChart {
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revItemSec .revDscCnt,
-        #revItemSec .revCtgChart {
-            margin-left: 220px;
-        }
+#revItemSec .revDscCnt,
+#revItemSec .revCtgChart {
+    margin-left: 220px;
+}
 
-        #revShopSec .revDscCnt {
-            width: 460px;
-            margin: 0 10px 0 0;
-            float: left;
-        }
+#revShopSec .revDscCnt {
+    width: 460px;
+    margin: 0 10px 0 0;
+    float: left;
+}
 
-        #revShopSec .revCtgChart {}
-        /* .revDscInner */
+#revShopSec .revCtgChart {}
+/* .revDscInner */
 
-        .revDscInner {
-            margin-left: 5px;
-            width: 460px;
-            padding-bottom: 20px;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revDscInner {
+    margin-left: 5px;
+    width: 460px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revItemSec .revDscInner {
-            float: left;
-        }
+#revItemSec .revDscInner {
+    float: left;
+}
 
-        #revShopSec .revDscInner {
-            padding-top: 10px;
-        }
+#revShopSec .revDscInner {
+    padding-top: 10px;
+}
 
-        .revDscRankSec {
-            overflow: hidden;
-            zoom: 1;
-        }
+.revDscRankSec {
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revItemSec .revDscRankSec {
-            margin: 0 0 15px 0;
-        }
+#revItemSec .revDscRankSec {
+    margin: 0 0 15px 0;
+}
 
-        #revShopSec .revDscRankSec {
-            margin: 0 230px 15px 0;
-        }
+#revShopSec .revDscRankSec {
+    margin: 0 230px 15px 0;
+}
 
-        .revDscRank {
-            width: 44px;
-            float: left;
-            margin: 0 10px 0 0;
-        }
+.revDscRank {
+    width: 44px;
+    float: left;
+    margin: 0 10px 0 0;
+}
 
-        .revDscCategory {
-            width: 300px;
-            float: left;
-        }
+.revDscCategory {
+    width: 300px;
+    float: left;
+}
 
-        .revDscCategory .revDate,
-        .revDscCategory .revSubCate {
-            padding: 7px 0 0 0;
-            display: block;
-        }
+.revDscCategory .revDate,
+.revDscCategory .revSubCate {
+    padding: 7px 0 0 0;
+    display: block;
+}
 
-        .revName {
-            padding: 0 5px 0 0;
-        }
+.revName {
+    padding: 0 5px 0 0;
+}
 
-        .revEvaSec,
-        .revPrdSec,
-        .revPriceSec,
-        .revBreakdownSec {
-            margin: 0 0 15px 0;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revEvaSec,
+.revPrdSec,
+.revPriceSec,
+.revBreakdownSec {
+    margin: 0 0 15px 0;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revItemSec .revEvaSec {}
+#revItemSec .revEvaSec {}
 
-        #revShopSec .revEvaSec {
-            margin: 0 0 30px 0;
-        }
+#revShopSec .revEvaSec {
+    margin: 0 0 30px 0;
+}
 
-        .revPriceSec {
-            line-height: 2em;
-        }
+.revPriceSec {
+    line-height: 2em;
+}
 
-        .revEvaTtl,
-        .revPrdTtl,
-        .revPriceTtl,
-        .revBreakdownTtl {
-            float: left;
-            color: #686868;
-            font-weight: bold;
-        }
+.revEvaTtl,
+.revPrdTtl,
+.revPriceTtl,
+.revBreakdownTtl {
+    float: left;
+    color: #686868;
+    font-weight: bold;
+}
 
-        #revItemSec .revEvaTtl,
-        #revItemSec .revPrdTtl,
-        #revItemSec .revPriceTtl {
-            width: 80px;
-        }
+#revItemSec .revEvaTtl,
+#revItemSec .revPrdTtl,
+#revItemSec .revPriceTtl {
+    width: 80px;
+}
 
-        #revShopSec .revEvaTtl,
-        #revShopSec .revBreakdownTtl {
-            width: 100px;
-        }
+#revShopSec .revEvaTtl,
+#revShopSec .revBreakdownTtl {
+    width: 100px;
+}
 
-        .revEvaTtl {
-            padding: 10px 0 0;
-        }
+.revEvaTtl {
+    padding: 10px 0 0;
+}
 
-        .revEvaDetail,
-        .revPrdTime,
-        .revPriceCnt,
-        .revBreakdownDetail {
-            float: left;
-        }
+.revEvaDetail,
+.revPrdTime,
+.revPriceCnt,
+.revBreakdownDetail {
+    float: left;
+}
 
-        #revItemSec .revEvaDetail,
-        #revItemSec .revPrdTime,
-        #revItemSec .revPriceCnt {
-            width: 370px;
-        }
+#revItemSec .revEvaDetail,
+#revItemSec .revPrdTime,
+#revItemSec .revPriceCnt {
+    width: 370px;
+}
 
-        #revShopSec .revEvaDetail,
-        #revShopSec .revPrdTime,
-        #revShopSec .revPriceCnt {
-            width: 350px;
-        }
+#revShopSec .revEvaDetail,
+#revShopSec .revPrdTime,
+#revShopSec .revPriceCnt {
+    width: 350px;
+}
 
-        .revEvaDetail .revEvaNumber {
-            font-weight: bold;
-            font-size: 200%;
-            color: #bf0000;
-            line-height: 1.2em;
-        }
+.revEvaDetail .revEvaNumber {
+    font-weight: bold;
+    font-size: 200%;
+    color: #bf0000;
+    line-height: 1.2em;
+}
 
-        .revEvaDetail .revEvaCount {
-            vertical-align: top;
-            display: inline-block;
-            margin-top: 10px;
-            line-height: 1.3em;
-        }
+.revEvaDetail .revEvaCount {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 10px;
+    line-height: 1.3em;
+}
 
-        .revPriceCnt img {
-            vertical-align: bottom;
-            position: absolute;
-            top: -4px;
-            left: 10px;
-        }
+.revPriceCnt img {
+    vertical-align: bottom;
+    position: absolute;
+    top: -4px;
+    left: 10px;
+}
 
-        .revPriceCnt .revPrice {
-            color: #bf0000;
-            padding: 0 5px 0 0;
-        }
+.revPriceCnt .revPrice {
+    color: #bf0000;
+    padding: 0 5px 0 0;
+}
 
-        .revPriceCart {
-            display: inline;
-            position: relative;
-        }
+.revPriceCart {
+    display: inline;
+    position: relative;
+}
 
-        #revItemSec .revPriceCart {
-            margin-left: 10px;
-        }
+#revItemSec .revPriceCart {
+    margin-left: 10px;
+}
 
-        #revShopSec .revPriceCart {
-            padding: 0 5px 0 0;
-        }
+#revShopSec .revPriceCart {
+    padding: 0 5px 0 0;
+}
 
-        .revDscChart {
-            width: 260px;
-            margin-bottom: 15px;
-            float: left;
-        }
+.revDscChart {
+    width: 260px;
+    margin-bottom: 15px;
+    float: left;
+}
 
-        .revDscChart .revDscChartTtl {
-            margin: 0 0 10px 0;
-            padding: 0 0 3px 5px;
-            border-bottom: 1px dotted #aeaeae;
-        }
-        /* .revCtgChart */
+.revDscChart .revDscChartTtl {
+    margin: 0 0 10px 0;
+    padding: 0 0 3px 5px;
+    border-bottom: 1px dotted #aeaeae;
+}
+/* .revCtgChart */
 
-        .revCtgChart {
-            margin-bottom: 20px;
-            clear: both;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revCtgChart {
+    margin-bottom: 20px;
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revCtgChartCnt {
-            width: 100%;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revCtgChartCnt {
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revItemSec .revCtgChart .revCtgChartDev {
-            width: 31%;
-            margin: 0 2% 0 0;
-            float: left;
-        }
+#revItemSec .revCtgChart .revCtgChartDev {
+    width: 31%;
+    margin: 0 2% 0 0;
+    float: left;
+}
 
-        #revShopSec .revCtgChart .revCtgChartDev {
-            /*
-  width: 32%;
+#revShopSec .revCtgChart .revCtgChartDev {
+    /*
+width: 32%;
 */
-            width: 460px;
-            margin: 0 10px 0 0;
-            float: left;
-        }
+    width: 460px;
+    margin: 0 10px 0 0;
+    float: left;
+}
 
-        #revShopSec .revDscCnt .revCtgChartDev {}
+#revShopSec .revDscCnt .revCtgChartDev {}
 
-        .revCtgChartCntCenter .revCtgChartDev {
-            margin: 0 auto;
-        }
+.revCtgChartCntCenter .revCtgChartDev {
+    margin: 0 auto;
+}
 
-        .revCtgChartDev .revChartDevTtl {
-            margin: 0 0 10px 0;
-            padding: 0 0 3px 5px;
-            border-bottom: 1px dotted #aeaeae;
-        }
+.revCtgChartDev .revChartDevTtl {
+    margin: 0 0 10px 0;
+    padding: 0 0 3px 5px;
+    border-bottom: 1px dotted #aeaeae;
+}
 
-        .revChartDevInner {
-            padding: 0 0 0 5px;
-        }
+.revChartDevInner {
+    padding: 0 0 0 5px;
+}
 
-        .revChartDevList {
-            overflow: hidden;
-            zoom: 1;
-        }
+.revChartDevList {
+    overflow: hidden;
+    zoom: 1;
+}
 
-        #revItemSec .revChartDevList a {
-            display: block;
-        }
+#revItemSec .revChartDevList a {
+    display: block;
+}
 
-        .revBreakdownSec a {
-            font-size: 100%;
-        }
+.revBreakdownSec a {
+    font-size: 100%;
+}
 
-        .revChartDevList a:hover {
-            cursor: pointer;
-        }
+.revChartDevList a:hover {
+    cursor: pointer;
+}
 
-        .revChartDevList a:hover span {
-            text-decoration: underline;
-        }
+.revChartDevList a:hover span {
+    text-decoration: underline;
+}
 
-        .revChartDevList span {
-            float: left;
-        }
+.revChartDevList span {
+    float: left;
+}
 
-        .revChartDevSttl {
-            width: 60px;
-            font-size: 90%;
-            text-align: left;
-            background: #ffffff;
-        }
+.revChartDevSttl {
+    width: 60px;
+    font-size: 90%;
+    text-align: left;
+    background: #ffffff;
+}
 
-        .revChartDevSttlAge {
-            width: 60px;
-            font-size: 90%;
-            text-align: left;
-            color: #686868;
-            background: #ffffff;
-        }
+.revChartDevSttlAge {
+    width: 60px;
+    font-size: 90%;
+    text-align: left;
+    color: #686868;
+    background: #ffffff;
+}
 
-        a:link .revChartDevSttlAge,
-        a:visited .revChartDevNum {
-            color: #1d54a7;
-        }
+a:link .revChartDevSttlAge,
+a:visited .revChartDevNum {
+    color: #1d54a7;
+}
 
-        a:hover .revChartDevSttlAge {
-            color: #C00000;
-        }
+a:hover .revChartDevSttlAge {
+    color: #C00000;
+}
 
-        .revChartDevSttlBreakdown {
-            width: 110px;
-            text-align: left;
-            background: #ffffff;
-        }
+.revChartDevSttlBreakdown {
+    width: 110px;
+    text-align: left;
+    background: #ffffff;
+}
 
-        .revChartDevBar {
-            margin: 0 10px;
-        }
+.revChartDevBar {
+    margin: 0 10px;
+}
 
-        #revItemSec .revChartDevBar {
-            width: 34%;
-            width: -webkit-calc(100% - 150px);
-            width: calc(100% - 150px);
-        }
+#revItemSec .revChartDevBar {
+    width: 34%;
+    width: -webkit-calc(100% - 150px);
+    width: calc(100% - 150px);
+}
 
-        #revShopSec .revChartDevBar {
-            width: 310px;
-        }
+#revShopSec .revChartDevBar {
+    width: 310px;
+}
 
-        .revChartDevStar {
-            float: left;
-            display: inline-block;
-            padding: 1px 0 0;
-            margin: 0 10px;
-        }
+.revChartDevStar {
+    float: left;
+    display: inline-block;
+    padding: 1px 0 0;
+    margin: 0 10px;
+}
 
-        .revChartDevNum {
-            float: right;
-            width: 60px;
-            margin-right: 5px;
-            font-size: 90%;
-            text-align: right;
-            color: #686868;
-            background: #ffffff;
-        }
+.revChartDevNum {
+    float: right;
+    width: 60px;
+    margin-right: 5px;
+    font-size: 90%;
+    text-align: right;
+    color: #686868;
+    background: #ffffff;
+}
 
-        a:link .revChartDevNum,
-        a:visited .revChartDevNum {
-            color: #1d54a7;
-        }
+a:link .revChartDevNum,
+a:visited .revChartDevNum {
+    color: #1d54a7;
+}
 
-        a:hover .revChartDevNum {
-            color: #C00000;
-        }
+a:hover .revChartDevNum {
+    color: #C00000;
+}
 
-        .revChartDevEva {
-            float: right;
-            width: 70px;
-            margin-right: 5px;
-            color: #f8ae4b;
-            font-weight: bold;
-            text-align: right;
-            text-decoration: none;
-            background: #ffffff;
-        }
+.revChartDevEva {
+    float: right;
+    width: 70px;
+    margin-right: 5px;
+    color: #f8ae4b;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+    background: #ffffff;
+}
 
-        .revItemMainThumb {
-            width: 200px;
-            float: left;
-            overflow: hidden;
-            zoom: 1;
-        }
-        /* .revDscShop */
+.revItemMainThumb {
+    width: 200px;
+    float: left;
+    overflow: hidden;
+    zoom: 1;
+}
+/* .revDscShop */
 
-        .revDscShop {
-            margin: 0 0 0 10px;
-            text-align: right;
-            display: block;
-            overflow: hidden;
-            zoom: 1;
-            float: right;
-        }
+.revDscShop {
+    margin: 0 0 0 10px;
+    text-align: right;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+    float: right;
+}
 
-        .revDscShopTtl {
-            display: none;
-            margin: 0 0 10px 0;
-            padding: 0 0 3px 0;
-        }
+.revDscShopTtl {
+    display: none;
+    margin: 0 0 10px 0;
+    padding: 0 0 3px 0;
+}
 
-        .revDscShopCnt {
-            overflow: hidden;
-            zoom: 1;
-        }
+.revDscShopCnt {
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revDscShopCnt .revDscShopName {
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_shop.gif) no-repeat left 12px;
-            padding: 3px 10px 0 20px;
-        }
+.revDscShopCnt .revDscShopName {
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_shop.gif) no-repeat left 12px;
+    padding: 3px 10px 0 20px;
+}
 
-        .revDscShopCnt li {
-            float: left;
-            line-height: 2.5em;
-        }
+.revDscShopCnt li {
+    float: left;
+    line-height: 2.5em;
+}
 
-        .revDscShopStarCnt {
-            margin: 0 0 10px 0;
-        }
+.revDscShopStarCnt {
+    margin: 0 0 10px 0;
+}
 
-        .revDscShopStar {
-            width: 80px;
-            padding: 0 10px 0 0;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revDscShopStar {
+    width: 80px;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revDscShopStar img {
-            vertical-align: bottom;
-        }
+.revDscShopStar img {
+    vertical-align: bottom;
+}
 
-        .revDscShopNumber {
-            font-weight: bold;
-            color: #bf0000;
-            font-size: 180%;
-        }
+.revDscShopNumber {
+    font-weight: bold;
+    color: #bf0000;
+    font-size: 180%;
+}
 
-        .revDscShopStar img {
-            width: 16px;
-            padding: 10px 0 0;
-            display: inline-block;
-            float: left;
-        }
+.revDscShopStar img {
+    width: 16px;
+    padding: 10px 0 0;
+    display: inline-block;
+    float: left;
+}
 
-        .revDscShopRvwBtn {
-            width: 150px;
-            padding-left: 20px;
-            position: relative;
-        }
-        /*--------------------------
+.revDscShopRvwBtn {
+    width: 150px;
+    padding-left: 20px;
+    position: relative;
+}
+/*--------------------------
 #revRvwSec
 ----------------------------*/
 
-        #revRvwSec {
-            width: 100%;
-            overflow: hidden;
-            zoom: 1;
-        }
-        /* .revRvwMain */
-
-        .revRvwMain {
-            width: 100%;
-            float: left;
-            margin-right: -265px;
-        }
-
-        .revRvwMainInr {
-            margin-right: 265px;
-        }
-
-        .revRvwMainTtl {
-            display: none;
-            font-weight: bold;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/home/beta/201008/event_ttile_icon.gif) no-repeat 0 1px;
-            color: #bf0000;
-            font-size: 125%;
-            padding: 0 0 10px 25px;
-        }
-        /* sort area */
-
-        .revRvwSortSec {
-            margin: 0 0 10px 0;
-            border: 1px solid #cccccc;
-            background: #efefef;
-            overflow: hidden;
-            padding: 10px 15px;
-            zoom: 1;
-        }
-
-        .revRvwSortList {
-            padding: 0 0 10px;
-            margin: 0 0 10px;
-            overflow: hidden;
-            zoom: 1;
-            line-height: 1.0em;
-            border-bottom: 1px solid #cccccc;
-        }
-
-        .revRvwSortTtl {
-            width: 70px;
-            padding: 4px 0 0;
-            text-align: left;
-            float: left;
-        }
-
-        .revRvwSortKeyCnt .revRvwSortTtl {
-            width: 70px;
-            padding: 4px 0 0;
-            text-align: left;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .revRvwSortTurn {
-            margin: 0 10px 0 0;
-            float: left;
-        }
-
-        .revRvwSortCount {
-            padding: 4px 21px 0 21px;
-            float: right;
-            text-align: right;
-            position: relative;
-        }
-
-        .revRvwSortCountIconPrev {
-            margin-right: 5px;
-            position: absolute;
-            top: 1px;
-            left: 0px;
-        }
-
-        .revRvwSortCountIconNext {
-            margin-left: 5px;
-            position: absolute;
-            top: 1px;
-            right: 0px;
-        }
-
-        .revFtBldNm {}
-
-        .revRvwSortCnt {
-            margin: 0 0 10px 0;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwSortKeyCnt {
-            margin: 0 0 10px;
-            padding: 0 0 0 70px;
-            position: relative;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwSortMenu {
-            float: left;
-        }
-
-        .revRvwSortKeyCnt .revRvwSortMenu {
-            width: 100%;
-        }
-
-        .revFormLiner {
-            float: left;
-        }
-
-        .revFormLiner li {
-            float: left;
-        }
-
-        .revFormLiner li select {
-            height: 22px;
-            margin: 0 20px 0 0;
-            border: 1px solid #cccccc;
-            vertical-align: middle;
-        }
-
-        .revRvwSortStar select {
-            /*width: 90px;*/
-        }
-
-        .revRvwSortAge select {
-            /*width: 115px;*/
-        }
-
-        .revRvwSortGen select {
-            /*width: 60px;*/
-        }
-
-        .revRvwSortImg select {
-            /*width: 135px;*/
-        }
-
-        .revRvwSortTxtArea {
-            display: block;
-            border: 1px solid #cccccc;
-            padding: 2px;
-            background-color: white;
-        }
-
-        .revRvwSortKeyCnt .revRvwSortTxt {
-            width: 100%;
-            border: none;
-            outline: none;
-        }
-
-        .revRvwSortBtn {
-            width: 210px;
-            margin: 0 auto;
-            text-align: center;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwSortStart input {
-            width: 100px;
-            height: 20px;
-            margin: 0 10px 0 0;
-            border: 0px solid;
-            cursor: pointer;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_sort.gif) no-repeat 0 0;
-        }
-
-        .revRvwSortClear input {
-            width: 100px;
-            height: 20px;
-            border: 0px solid;
-            cursor: pointer;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_clear.gif) no-repeat 0 0;
-        }
-
-        .revRvwSortBtn li {
-            float: left;
-        }
-        /* .revRvwUserSec */
-
-        .revRvwUserSecCnt {
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwDetail .revRvwUserSecCnt {
-            border-top: 1px solid #cccccc;
-        }
-
-        .revRvwUserSec {
-            padding: 0 0 30px 5px;
-            margin: 20px 0 -1px;
-            border-bottom: 1px solid #cccccc;
-            background: none;
-        }
-
-        .revUserRvwer {
-            margin: 0 0 10px;
-            padding: 0 5px 10px;
-            overflow: hidden;
-            zoom: 1;
-            border-bottom: 1px dotted #cccccc;
-        }
-
-        .revUserFace {
-            width: 62px;
-            float: left;
-        }
-
-        .revUserFace img {
-            max-width: 52px;
-            max-height: 52px;
-            _width: 52px;
-        }
-
-        .revUserFaceDtl {
-            float: left;
-            width: 65%;
-            width: -webkit-calc(100% - 62px - 160px);
-            width: calc(100% - 242px);
-        }
-
-        .revUserFaceDtlCnt {
-            font-size: 82%;
-        }
-
-        .revUserFaceName {
-            margin: 0 0 10px;
-            color: #686868;
-        }
-
-        .revUserFaceName a {
-            font-size: 120%;
-            line-height: 1.6em;
-            font-weight: bold;
-            padding: 0 5px 0 0;
-        }
-
-        .revUserFaceDtlUnder {
-            line-height: 1.5em;
-            vertical-align: middle;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revUserFaceDtlIcon {
-            width: 29px;
-            height: 15px;
-            float: left;
-            margin-right: 10px;
-        }
-
-        .revUserFaceDtlTxt {
-            padding: 2px 0 0 0;
-            float: left;
-        }
-
-        .revUserFaceDtlTxt span {
-            padding: 0 10px 0 0;
-            white-space: nowrap;
-            float: left;
-        }
-
-        .revUserFavReg {
-            width: 160px;
-            float: right;
-        }
-
-        .revRvwUserMain {
-            padding: 0 5px;
-        }
-
-        .revRvwUserMainHead {
-            margin: 0 0 10px;
-            overflow: hidden;
-            zoom: 1;
-            vertical-align: middle;
-            line-height: 1.5em;
-        }
-
-        .revUserRvwerStar {
-            float: left;
-            display: inline-block;
-            padding: 1px 0 0;
-        }
-
-        .revUserRvwerNum {
-            font-size: 180%;
-            font-weight: bold;
-            color: #f8ae4b;
-            padding: 0 0 0 10px;
-            float: left;
-            display: inline-block;
-        }
-
-        .revUserEntryDate {
-            float: right;
-            display: inline-block;
-        }
-
-        .revRvwUserDisp {
-            font-size: 82%;
-            margin: 0;
-        }
-
-        .revRvwUserDisp ul {
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revUserDispList {
-            float: left;
-            display: inline;
-            padding: 0 20px 10px 0;
-            text-align: left;
-            white-space: nowrap;
-        }
-
-        .revDispListNum {
-            font-weight: bold;
-            color: #f8ae4b;
-            font-size: 120%;
-        }
-
-        .revRvwUserComment {
-            line-height: 1.6em;
-            margin: 0 0 30px 0;
-        }
-
-        .revDispListTxt {
-            font-weight: bold;
-            color: #f8ae4b;
-        }
-
-        .revUserEntry {
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwUserEntryCnt {
-            width: 100%;
-            margin-right: -190px;
-            float: left;
-        }
-
-        .revRvwUserItemCnt {
-            width: 100%;
-            margin-right: -180px;
-            float: right;
-        }
-
-        .revEntryNoImgCnt {
-            margin-right: 0;
-        }
-
-        .revRvwUserEntryInr {
-            margin-right: 190px;
-        }
-
-        .revEntryNoImgCnt .revRvwUserEntryInr {
-            margin-right: 0;
-            margin-bottom: 20px;
-        }
-
-        .revRvwUserEntryItemName {
-            margin: 0 0 5px 0;
-            line-height: 1.6em;
-            font-weight: bold;
-        }
-
-        .revRvwUserEntryTtl {
-            padding: 0 0 10px;
-            font-size: 115%;
-            font-weight: bold;
-            color: #686868;
-        }
-
-        .revRvwUserEntryItemStar {
-            margin: 0 0 5px 0;
-        }
-
-        .revRvwUserEntryCmt {
-            margin: 0 0 10px;
-            line-height: 1.6em;
-        }
-
-        .revRvwUserEntryKeyword {
-            background-color: #FFED85;
-        }
-
-        .revRvwUserEntryOther,
-        .revRvwUserEntryDetail {
-            margin: 0 0 5px;
-        }
-
-        .revRvwUserEntryOther a,
-        .revRvwUserEntryDetail a {
-            padding: 0 20px 0 9px;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_01.gif) no-repeat 0 3px;
-        }
-
-        .revUserEntryImg {
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwList .revUserEntryImg {
-            width: 181px;
-            float: right;
-        }
-
-        .revRvwDetail .revUserEntryImg {
-            width: auto;
-            margin-left: 10px;
-            padding: 15px 0;
-        }
-
-        .revEntryImgList {
-            margin: 0 0 10px 10px;
-            _margin: 0;
-            _padding: 0 0 10px 10px;
-            float: left;
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            position: relative;
-            border: 1px solid #cccccc;
-            background: #efefef;
-            _background: #ffffff;
-        }
-
-        .revEntryImgList a {
-            display: inline-block;
-        }
-
-        .revEntry4Img .revEntryImgList {
-            width: 78px;
-            height: 78px;
-            line-height: 78px;
-        }
-
-        .revEntry1Img .revEntryImgList {
-            width: 138px;
-            height: 138px;
-            line-height: 138px;
-            margin-left: 25px;
-        }
-
-        .revRvwDetail .revUserEntryImg li {
-            display: block;
-            float: left;
-            margin: 0 10px 10px 0;
-            text-align: center;
-            vertical-align: middle;
-            line-height: 180px;
-            position: relative;
-        }
-
-        .revRvwDetail .revUserEntryImg a {
-            display: block;
-            width: 180px;
-            height: 180px;
-        }
-
-        .revEntryImgList img {
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .revEntry4Img .revEntryImgList img {
-            max-height: 76px;
-            max-width: 76px;
-            _width: 76px;
-        }
-
-        .revEntry1Img .revEntryImgList img {
-            max-height: 116px;
-            max-width: 116px;
-            _width: 116px;
-        }
-
-        .revRvwDetail .revUserEntryImg img {
-            max-width: 180px;
-            max-height: 180px;
-            _width: 180px;
-            margin: auto;
-            vertical-align: middle;
-            *position: static;
-            *top: auto;
-            *bottom: auto;
-            *left: auto;
-            *right: auto;
-        }
-
-        .revEntryImgList .revEntryImgMovieIcon,
-        .revRvwDetail .revEntryImgMovieIcon {
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_movie.png) no-repeat right top;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -15px 0 0 -15px;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
-
-        .revEntryImgList .revEntryImgPhotoIcon {
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/img_click.png) no-repeat right top;
-            position: absolute;
-            right: 1px;
-            top: 2px;
-            width: 16px;
-            height: 15px;
-            cursor: pointer;
-        }
-
-        .revUserEntryAns {
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revEntryAnsTxt {
-            padding: 0 10px 0 0;
-            line-height: 1.8;
-        }
-
-        .revEntryAnsNum {
-            font-size: 180%;
-            font-weight: bold;
-            color: #bf0000;
-            line-height: 1.5em;
-        }
-
-        .revEntryAnsBtn {
-            padding: 0 10px 0 0;
-        }
-
-        .revUserEntryAnsRpt {
-            float: right;
-            font-size: 82%;
-            padding-top: 7px;
-        }
-        /* .revPagerSec */
-
-        .revPagerSec {
-            padding: 2px 10px 7px;
-            margin: 0 0 20px 0;
-            background: #eeeeee;
-            border: 1px solid #cccccc;
-            overflow: hidden;
-            zoom: 1;
-            display: none;
-        }
-
-        .revPagers {
-            text-align: center;
-            line-height: 3.1em;
-            margin: 0 0 9px;
-        }
-
-        .revPagination {
-            padding: 2px 6px;
-            vertical-align: top;
-            color: #000000;
-        }
-
-        #revWrap .revPagination a {
-            margin: 0 1px;
-            padding: 6px;
-            border: solid 1px #ddaeae;
-            text-decoration: none!important;
-            background: #ffffff!important;
-            color: #c00000!important;
-        }
-
-        #revWrap .revPagination a:hover {
-            color: #ffffff!important;
-            background: #bf0000!important;
-            text-decoration: none!important;
-        }
-
-        .revThisPage {
-            font-weight: bold;
-        }
-
-        .revDotLine {
-            padding: 2px 6px;
-            vertical-align: top;
-            color: #666666;
-        }
-
-        .revAllPages {
-            font-size: 90%;
-            text-align: center;
-            margin: -5px 0 2px 0;
-        }
-
-        .revMoreContSec {
-            margin-bottom: 50px;
-        }
-
-        .revSearchLinkSec {
-            overflow: hidden;
-            zoom: 1;
-            margin-bottom: 10px;
-        }
-
-        .revSearchLinkCaption {
-            display: block;
-            margin: 0 10px 0 20px;
-            width: 90px;
-            float: left;
-            color: #686868;
-            font-weight: bold;
-        }
-
-        .revSearchLinkCnt {
-            float: left;
-        }
-
-        .revSearchLinkItem {
-            overflow: hidden;
-            zoom: 1;
-            margin-bottom: 10px;
-        }
-
-        .revSearchLinkSubhead,
-        .revSearchLinkOption {
-            display: inline;
-        }
-
-        .revSearchLinkSubhead {
-            display: block;
-            margin-right: 20px;
-            width: 100px;
-            float: left;
-        }
-
-        .revSearchLinkSubhead:after {
-            content: ":";
-        }
-
-        .revSearchLinkOption,
-        .revSearchLinklist {
-            float: left;
-            margin-right: 20px;
-        }
-
-        .revRvwList .revSearchLinkRelease {
-            text-align: right;
-            margin-bottom: 10px;
-            padding: 0 5px 10px 0;
-            border-bottom: 1px solid #cccccc;
-        }
-
-        .revMoreLinkSec {
-            text-align: right;
-        }
-
-        .revRvwList .revMoreLinkSec {
-            padding: 0px 5px 0 5px;
-        }
-
-        .revRvwDetail .revMoreLinkSec {
-            padding: 10px 5px 0 5px;
-            border-top: 1px solid #cccccc;
-        }
-
-        .revMoreLink {
-            display: inline;
-            padding-left: 20px;
-        }
-        /* .revFuncSec */
-
-        .revFuncSec {
-            width: 220px;
-            margin: 0 auto 50px;
-            text-align: center;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revFuncMenu {
-            width: 300px;
-            margin: 3px 0 0 0;
-            float: left;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revFuncIcon {
-            width: 89px;
-            padding: 0 0 0 10px;
-            float: left;
-        }
-
-        .revSusumeru {
-            width: 220px;
-            float: right;
-        }
-        /* media query */
-
-        @media screen and (min-width: 1150px) {
-            .revRvwUserSec {
-                overflow: hidden;
-                zoom: 1;
-                position: relative;
-                padding: 0 10px 10px;
-                margin-top: 10px;
-            }
-            .revRvwUserHead {
-                width: 180px;
-                float: left;
-                display: none;
-            }
-            .revRvwUserMain {
-                width: 100%;
-                margin-left: 180px;
-                padding: 10px 0 10px 20px;
-                border-left: 1px dotted #cccccc;
-            }
-            .revRvwUserMainHead {
-                margin-right: 192px;
-            }
-            .revUserRvwer {
-                border: none;
-            }
-            .revUserFace {
-                margin-bottom: 10px;
-            }
-            .revUserFaceDtl {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            .revUserFaceDtlTxt {
-                width: 120px;
-                text-align: left;
-                float: left;
-            }
-            .revUserFavReg {
-                float: none;
-                text-align: center;
-            }
-            .revUserEntry {
-                margin-right: 190px;
-            }
-            .revUserEntryAns {
-                margin-right: 190px;
-                padding-left: 5px;
-            }
-        }
-        /* .revRvwSub */
-
-        .revRvwSub {
-            width: 250px;
-            float: right;
-            display: block;
-        }
-
-        .revRvwSubClmn {
-            padding: 0 0 8px 0;
-            margin: 0 0 20px 0;
-            background: #ffffff url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/bg_sub_clmn_bottom.gif) no-repeat left bottom;
-        }
-
-        .revRvwSubTtl {
-            margin: 0 2px 0 0;
-            background: #bf0000 url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/bg_sub_clmn_top.gif) no-repeat left top;
-            display: block;
-            padding: 5px 5px 3px 10px;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .revRvwSubCnt {
-            padding: 15px 10px 10px;
-            margin: 0 0 0 0;
-            border-left: 1px solid #cccccc;
-            background: #ffffff url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/bg_sub_clmn_right.gif) repeat-y right top;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revRvwSubCntInr {
-            padding: 10px 0 10px 0;
-            margin: 0;
-            margin-bottom: -1px;
-            border-bottom: 1px dotted #aeaeae;
-        }
-
-        .revRvwSubCntInrRank {
-            padding: 0 0 10px 0;
-            font-weight: bold;
-            font-size: 110%;
-            color: #bf0000;
-        }
-
-        .revRvwSubList {
-            padding: 5px 10px 0;
-        }
-
-        .revRvwSubHead {
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revSubFace {
-            float: left;
-            display: inline-block;
-            position: relative;
-            width: 52px;
-            vertical-align: middle;
-            text-align: center;
-            margin: 0 10px 0 0;
-        }
-
-        .revRvwSubCntInr .revSubFace {
-            width: 95px;
-        }
-
-        .revSubFace img {
-            max-width: 52px;
-            max-height: 52px;
-            _width: 52px;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .revRvwSubCntInr .revSubFace img {
-            max-width: 95px;
-            max-height: 95px;
-            _width: 95px;
-        }
-
-        .revSubRvwerDtl {
-            overflow: hidden;
-            zoom: 1;
-            line-height: 1.5em;
-        }
-
-        .revSubRvwerName {
-            font-size: 82%;
-            line-height: 1.6em;
-            padding: 0 0 5px 0;
-        }
-
-        .revSubRvwerName .revFtBld {
-            font-size: 120%;
-        }
-
-        .revSubRvwerSeg {
-            font-size: 82%;
-            line-height: 1.5em;
-            vertical-align: middle;
-            overflow: hidden;
-            zoom: 1;
-        }
-
-        .revSubRvwerSeg img {
-            padding: 0 10px 5px 0;
-            vertical-align: middle;
-        }
-
-        .revSubRvwerSum {
-            font-size: 82%;
-        }
-
-        .revSubRvwerLead {
-            overflow: hidden;
-            zoom: 1;
-            line-height: 1.2em;
-            padding: 6px 0 8px 0;
-        }
-
-        .revSubRvwerPriceList {
-            padding: 0 0 5px 0;
-        }
-
-        .revRvwerPrice {
-            color: #bf0000;
-        }
-
-        .revSubRvwerStar {
-            float: left;
-        }
-
-        .revSubRvwerStar img {
-            vertical-align: top;
-            padding: 2px 0 0 0;
-        }
-
-        .revSubRvwerNum {
-            padding: 0 0 0 5px;
-            font-weight: bold;
-            color: #f8ae4b;
-        }
-
-        .revSubRvwerDate {
-            text-align: right;
-        }
-
-        .revSubInrTtl {
-            padding: 0 0 5px 0;
-            line-height: 1.6;
-            font-weight: bold;
-            color: #686868;
-        }
-
-        .revSubInrCmt {
-            padding: 0 0 5px 0;
-            line-height: 1.5em;
-        }
-
-        .revSubInrLead {
-            padding: 0 0 10px 9px;
-            margin: 0 0 10px 0;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_01.gif) no-repeat 0 2px;
-            border-bottom: 1px dotted #aeaeae;
-        }
-
-        .revSubAnsNum {
-            padding: 0 0 10px 0;
-        }
-
-        .revAnsNumber {
-            padding: 0 3px 0 0;
-            font-weight: bold;
-            font-size: 120%;
-            color: #bf0000;
-        }
-
-        .revSubAnsLead {
-            padding: 0 0 0 9px;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_01.gif) no-repeat 0 3px;
-        }
-
-        .revSubMoreLead {
-            text-align: right;
-            font-size: 82%;
-        }
-
-        .revRvwEntryThumb {
-            padding: 10px 0 10px 0;
-            margin: 0;
-            margin-bottom: -1px;
-            text-align: center;
-            border-bottom: 1px dotted #aeaeae;
-        }
-
-        .revEntryImg {
-            /*
-  padding: 0 0 10px 0;
+#revRvwSec {
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+}
+/* .revRvwMain */
+
+.revRvwMain {
+    width: 100%;
+    float: left;
+    margin-right: -265px;
+}
+
+.revRvwMainInr {
+    margin-right: 265px;
+}
+
+.revRvwMainTtl {
+    display: none;
+    font-weight: bold;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/home/beta/201008/event_ttile_icon.gif) no-repeat 0 1px;
+    color: #bf0000;
+    font-size: 125%;
+    padding: 0 0 10px 25px;
+}
+/* sort area */
+
+.revRvwSortSec {
+    margin: 0 0 10px 0;
+    border: 1px solid #cccccc;
+    background: #efefef;
+    overflow: hidden;
+    padding: 10px 15px;
+    zoom: 1;
+}
+
+.revRvwSortList {
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+    overflow: hidden;
+    zoom: 1;
+    line-height: 1.0em;
+    border-bottom: 1px solid #cccccc;
+}
+
+.revRvwSortTtl {
+    width: 70px;
+    padding: 4px 0 0;
+    text-align: left;
+    float: left;
+}
+
+.revRvwSortKeyCnt .revRvwSortTtl {
+    width: 70px;
+    padding: 4px 0 0;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.revRvwSortTurn {
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+.revRvwSortCount {
+    padding: 4px 21px 0 21px;
+    float: right;
+    text-align: right;
+    position: relative;
+}
+
+.revRvwSortCountIconPrev {
+    margin-right: 5px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+}
+
+.revRvwSortCountIconNext {
+    margin-left: 5px;
+    position: absolute;
+    top: 1px;
+    right: 0px;
+}
+
+.revFtBldNm {}
+
+.revRvwSortCnt {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwSortKeyCnt {
+    margin: 0 0 10px;
+    padding: 0 0 0 70px;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwSortMenu {
+    float: left;
+}
+
+.revRvwSortKeyCnt .revRvwSortMenu {
+    width: 100%;
+}
+
+.revFormLiner {
+    float: left;
+}
+
+.revFormLiner li {
+    float: left;
+}
+
+.revFormLiner li select {
+    height: 22px;
+    margin: 0 20px 0 0;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+}
+
+.revRvwSortStar select {
+    /*width: 90px;*/
+}
+
+.revRvwSortAge select {
+    /*width: 115px;*/
+}
+
+.revRvwSortGen select {
+    /*width: 60px;*/
+}
+
+.revRvwSortImg select {
+    /*width: 135px;*/
+}
+
+.revRvwSortTxtArea {
+    display: block;
+    border: 1px solid #cccccc;
+    padding: 2px;
+    background-color: white;
+}
+
+.revRvwSortKeyCnt .revRvwSortTxt {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.revRvwSortBtn {
+    width: 210px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwSortStart input {
+    width: 100px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    border: 0px solid;
+    cursor: pointer;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_sort.gif) no-repeat 0 0;
+}
+
+.revRvwSortClear input {
+    width: 100px;
+    height: 20px;
+    border: 0px solid;
+    cursor: pointer;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_clear.gif) no-repeat 0 0;
+}
+
+.revRvwSortBtn li {
+    float: left;
+}
+/* .revRvwUserSec */
+
+.revRvwUserSecCnt {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwDetail .revRvwUserSecCnt {
+    border-top: 1px solid #cccccc;
+}
+
+.revRvwUserSec {
+    padding: 0 0 30px 5px;
+    margin: 20px 0 -1px;
+    border-bottom: 1px solid #cccccc;
+    background: none;
+}
+
+.revUserRvwer {
+    margin: 0 0 10px;
+    padding: 0 5px 10px;
+    overflow: hidden;
+    zoom: 1;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.revUserFace {
+    width: 62px;
+    float: left;
+}
+
+.revUserFace img {
+    max-width: 52px;
+    max-height: 52px;
+    _width: 52px;
+}
+
+.revUserFaceDtl {
+    float: left;
+    width: 65%;
+    width: -webkit-calc(100% - 62px - 160px);
+    width: calc(100% - 242px);
+}
+
+.revUserFaceDtlCnt {
+    font-size: 82%;
+}
+
+.revUserFaceName {
+    margin: 0 0 10px;
+    color: #686868;
+}
+
+.revUserFaceName a {
+    font-size: 120%;
+    line-height: 1.6em;
+    font-weight: bold;
+    padding: 0 5px 0 0;
+}
+
+.revUserFaceDtlUnder {
+    line-height: 1.5em;
+    vertical-align: middle;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revUserFaceDtlIcon {
+    width: 29px;
+    height: 15px;
+    float: left;
+    margin-right: 10px;
+}
+
+.revUserFaceDtlTxt {
+    padding: 2px 0 0 0;
+    float: left;
+}
+
+.revUserFaceDtlTxt span {
+    padding: 0 10px 0 0;
+    white-space: nowrap;
+    float: left;
+}
+
+.revUserFavReg {
+    width: 160px;
+    float: right;
+}
+
+.revRvwUserMain {
+    padding: 0 5px;
+}
+
+.revRvwUserMainHead {
+    margin: 0 0 10px;
+    overflow: hidden;
+    zoom: 1;
+    vertical-align: middle;
+    line-height: 1.5em;
+}
+
+.revUserRvwerStar {
+    float: left;
+    display: inline-block;
+    padding: 1px 0 0;
+}
+
+.revUserRvwerNum {
+    font-size: 180%;
+    font-weight: bold;
+    color: #f8ae4b;
+    padding: 0 0 0 10px;
+    float: left;
+    display: inline-block;
+}
+
+.revUserEntryDate {
+    float: right;
+    display: inline-block;
+}
+
+.revRvwUserDisp {
+    font-size: 82%;
+    margin: 0;
+}
+
+.revRvwUserDisp ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revUserDispList {
+    float: left;
+    display: inline;
+    padding: 0 20px 10px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.revDispListNum {
+    font-weight: bold;
+    color: #f8ae4b;
+    font-size: 120%;
+}
+
+.revRvwUserComment {
+    line-height: 1.6em;
+    margin: 0 0 30px 0;
+}
+
+.revDispListTxt {
+    font-weight: bold;
+    color: #f8ae4b;
+}
+
+.revUserEntry {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwUserEntryCnt {
+    width: 100%;
+    margin-right: -190px;
+    float: left;
+}
+
+.revRvwUserItemCnt {
+    width: 100%;
+    margin-right: -180px;
+    float: right;
+}
+
+.revEntryNoImgCnt {
+    margin-right: 0;
+}
+
+.revRvwUserEntryInr {
+    margin-right: 190px;
+}
+
+.revEntryNoImgCnt .revRvwUserEntryInr {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.revRvwUserEntryItemName {
+    margin: 0 0 5px 0;
+    line-height: 1.6em;
+    font-weight: bold;
+}
+
+.revRvwUserEntryTtl {
+    padding: 0 0 10px;
+    font-size: 115%;
+    font-weight: bold;
+    color: #686868;
+}
+
+.revRvwUserEntryItemStar {
+    margin: 0 0 5px 0;
+}
+
+.revRvwUserEntryCmt {
+    margin: 0 0 10px;
+    line-height: 1.6em;
+}
+
+.revRvwUserEntryKeyword {
+    background-color: #FFED85;
+}
+
+.revRvwUserEntryOther,
+.revRvwUserEntryDetail {
+    margin: 0 0 5px;
+}
+
+.revRvwUserEntryOther a,
+.revRvwUserEntryDetail a {
+    padding: 0 20px 0 9px;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_01.gif) no-repeat 0 3px;
+}
+
+.revUserEntryImg {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwList .revUserEntryImg {
+    width: 181px;
+    float: right;
+}
+
+.revRvwDetail .revUserEntryImg {
+    width: auto;
+    margin-left: 10px;
+    padding: 15px 0;
+}
+
+.revEntryImgList {
+    margin: 0 0 10px 10px;
+    _margin: 0;
+    _padding: 0 0 10px 10px;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    border: 1px solid #cccccc;
+    background: #efefef;
+    _background: #ffffff;
+}
+
+.revEntryImgList a {
+    display: inline-block;
+}
+
+.revEntry4Img .revEntryImgList {
+    width: 78px;
+    height: 78px;
+    line-height: 78px;
+}
+
+.revEntry1Img .revEntryImgList {
+    width: 138px;
+    height: 138px;
+    line-height: 138px;
+    margin-left: 25px;
+}
+
+.revRvwDetail .revUserEntryImg li {
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 180px;
+    position: relative;
+}
+
+.revRvwDetail .revUserEntryImg a {
+    display: block;
+    width: 180px;
+    height: 180px;
+}
+
+.revEntryImgList img {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.revEntry4Img .revEntryImgList img {
+    max-height: 76px;
+    max-width: 76px;
+    _width: 76px;
+}
+
+.revEntry1Img .revEntryImgList img {
+    max-height: 116px;
+    max-width: 116px;
+    _width: 116px;
+}
+
+.revRvwDetail .revUserEntryImg img {
+    max-width: 180px;
+    max-height: 180px;
+    _width: 180px;
+    margin: auto;
+    vertical-align: middle;
+    *position: static;
+    *top: auto;
+    *bottom: auto;
+    *left: auto;
+    *right: auto;
+}
+
+.revEntryImgList .revEntryImgMovieIcon,
+.revRvwDetail .revEntryImgMovieIcon {
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_movie.png) no-repeat right top;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.revEntryImgList .revEntryImgPhotoIcon {
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/img_click.png) no-repeat right top;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.revUserEntryAns {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revEntryAnsTxt {
+    padding: 0 10px 0 0;
+    line-height: 1.8;
+}
+
+.revEntryAnsNum {
+    font-size: 180%;
+    font-weight: bold;
+    color: #bf0000;
+    line-height: 1.5em;
+}
+
+.revEntryAnsBtn {
+    padding: 0 10px 0 0;
+}
+
+.revUserEntryAnsRpt {
+    float: right;
+    font-size: 82%;
+    padding-top: 7px;
+}
+/* .revPagerSec */
+
+.revPagerSec {
+    padding: 2px 10px 7px;
+    margin: 0 0 20px 0;
+    background: #eeeeee;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+    zoom: 1;
+    display: none;
+}
+
+.revPagers {
+    text-align: center;
+    line-height: 3.1em;
+    margin: 0 0 9px;
+}
+
+.revPagination {
+    padding: 2px 6px;
+    vertical-align: top;
+    color: #000000;
+}
+
+#revWrap .revPagination a {
+    margin: 0 1px;
+    padding: 6px;
+    border: solid 1px #ddaeae;
+    text-decoration: none!important;
+    background: #ffffff!important;
+    color: #c00000!important;
+}
+
+#revWrap .revPagination a:hover {
+    color: #ffffff!important;
+    background: #bf0000!important;
+    text-decoration: none!important;
+}
+
+.revThisPage {
+    font-weight: bold;
+}
+
+.revDotLine {
+    padding: 2px 6px;
+    vertical-align: top;
+    color: #666666;
+}
+
+.revAllPages {
+    font-size: 90%;
+    text-align: center;
+    margin: -5px 0 2px 0;
+}
+
+.revMoreContSec {
+    margin-bottom: 50px;
+}
+
+.revSearchLinkSec {
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: 10px;
+}
+
+.revSearchLinkCaption {
+    display: block;
+    margin: 0 10px 0 20px;
+    width: 90px;
+    float: left;
+    color: #686868;
+    font-weight: bold;
+}
+
+.revSearchLinkCnt {
+    float: left;
+}
+
+.revSearchLinkItem {
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: 10px;
+}
+
+.revSearchLinkSubhead,
+.revSearchLinkOption {
+    display: inline;
+}
+
+.revSearchLinkSubhead {
+    display: block;
+    margin-right: 20px;
+    width: 100px;
+    float: left;
+}
+
+.revSearchLinkSubhead:after {
+    content: ":";
+}
+
+.revSearchLinkOption,
+.revSearchLinklist {
+    float: left;
+    margin-right: 20px;
+}
+
+.revRvwList .revSearchLinkRelease {
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 0 5px 10px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.revMoreLinkSec {
+    text-align: right;
+}
+
+.revRvwList .revMoreLinkSec {
+    padding: 0px 5px 0 5px;
+}
+
+.revRvwDetail .revMoreLinkSec {
+    padding: 10px 5px 0 5px;
+    border-top: 1px solid #cccccc;
+}
+
+.revMoreLink {
+    display: inline;
+    padding-left: 20px;
+}
+/* .revFuncSec */
+
+.revFuncSec {
+    width: 220px;
+    margin: 0 auto 50px;
+    text-align: center;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revFuncMenu {
+    width: 300px;
+    margin: 3px 0 0 0;
+    float: left;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revFuncIcon {
+    width: 89px;
+    padding: 0 0 0 10px;
+    float: left;
+}
+
+.revSusumeru {
+    width: 220px;
+    float: right;
+}
+/* media query */
+
+@media screen and (min-width: 1150px) {
+    .revRvwUserSec {
+        overflow: hidden;
+        zoom: 1;
+        position: relative;
+        padding: 0 10px 10px;
+        margin-top: 10px;
+    }
+    .revRvwUserHead {
+        width: 180px;
+        float: left;
+        display: none;
+    }
+    .revRvwUserMain {
+        width: 100%;
+        margin-left: 180px;
+        padding: 10px 0 10px 20px;
+        border-left: 1px dotted #cccccc;
+    }
+    .revRvwUserMainHead {
+        margin-right: 192px;
+    }
+    .revUserRvwer {
+        border: none;
+    }
+    .revUserFace {
+        margin-bottom: 10px;
+    }
+    .revUserFaceDtl {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .revUserFaceDtlTxt {
+        width: 120px;
+        text-align: left;
+        float: left;
+    }
+    .revUserFavReg {
+        float: none;
+        text-align: center;
+    }
+    .revUserEntry {
+        margin-right: 190px;
+    }
+    .revUserEntryAns {
+        margin-right: 190px;
+        padding-left: 5px;
+    }
+}
+/* .revRvwSub */
+
+.revRvwSub {
+    width: 250px;
+    float: right;
+    display: block;
+}
+
+.revRvwSubClmn {
+    padding: 0 0 8px 0;
+    margin: 0 0 20px 0;
+    background: #ffffff url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/bg_sub_clmn_bottom.gif) no-repeat left bottom;
+}
+
+.revRvwSubTtl {
+    margin: 0 2px 0 0;
+    background: #bf0000 url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/bg_sub_clmn_top.gif) no-repeat left top;
+    display: block;
+    padding: 5px 5px 3px 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.revRvwSubCnt {
+    padding: 15px 10px 10px;
+    margin: 0 0 0 0;
+    border-left: 1px solid #cccccc;
+    background: #ffffff url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/bg_sub_clmn_right.gif) repeat-y right top;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revRvwSubCntInr {
+    padding: 10px 0 10px 0;
+    margin: 0;
+    margin-bottom: -1px;
+    border-bottom: 1px dotted #aeaeae;
+}
+
+.revRvwSubCntInrRank {
+    padding: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 110%;
+    color: #bf0000;
+}
+
+.revRvwSubList {
+    padding: 5px 10px 0;
+}
+
+.revRvwSubHead {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revSubFace {
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 52px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+
+.revRvwSubCntInr .revSubFace {
+    width: 95px;
+}
+
+.revSubFace img {
+    max-width: 52px;
+    max-height: 52px;
+    _width: 52px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.revRvwSubCntInr .revSubFace img {
+    max-width: 95px;
+    max-height: 95px;
+    _width: 95px;
+}
+
+.revSubRvwerDtl {
+    overflow: hidden;
+    zoom: 1;
+    line-height: 1.5em;
+}
+
+.revSubRvwerName {
+    font-size: 82%;
+    line-height: 1.6em;
+    padding: 0 0 5px 0;
+}
+
+.revSubRvwerName .revFtBld {
+    font-size: 120%;
+}
+
+.revSubRvwerSeg {
+    font-size: 82%;
+    line-height: 1.5em;
+    vertical-align: middle;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.revSubRvwerSeg img {
+    padding: 0 10px 5px 0;
+    vertical-align: middle;
+}
+
+.revSubRvwerSum {
+    font-size: 82%;
+}
+
+.revSubRvwerLead {
+    overflow: hidden;
+    zoom: 1;
+    line-height: 1.2em;
+    padding: 6px 0 8px 0;
+}
+
+.revSubRvwerPriceList {
+    padding: 0 0 5px 0;
+}
+
+.revRvwerPrice {
+    color: #bf0000;
+}
+
+.revSubRvwerStar {
+    float: left;
+}
+
+.revSubRvwerStar img {
+    vertical-align: top;
+    padding: 2px 0 0 0;
+}
+
+.revSubRvwerNum {
+    padding: 0 0 0 5px;
+    font-weight: bold;
+    color: #f8ae4b;
+}
+
+.revSubRvwerDate {
+    text-align: right;
+}
+
+.revSubInrTtl {
+    padding: 0 0 5px 0;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #686868;
+}
+
+.revSubInrCmt {
+    padding: 0 0 5px 0;
+    line-height: 1.5em;
+}
+
+.revSubInrLead {
+    padding: 0 0 10px 9px;
+    margin: 0 0 10px 0;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_01.gif) no-repeat 0 2px;
+    border-bottom: 1px dotted #aeaeae;
+}
+
+.revSubAnsNum {
+    padding: 0 0 10px 0;
+}
+
+.revAnsNumber {
+    padding: 0 3px 0 0;
+    font-weight: bold;
+    font-size: 120%;
+    color: #bf0000;
+}
+
+.revSubAnsLead {
+    padding: 0 0 0 9px;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_01.gif) no-repeat 0 3px;
+}
+
+.revSubMoreLead {
+    text-align: right;
+    font-size: 82%;
+}
+
+.revRvwEntryThumb {
+    padding: 10px 0 10px 0;
+    margin: 0;
+    margin-bottom: -1px;
+    text-align: center;
+    border-bottom: 1px dotted #aeaeae;
+}
+
+.revEntryImg {
+    /*
+padding: 0 0 10px 0;
 */
-        }
+}
 
-        .revEntryImg img {
-            _width: 160px;
-            max-width: 160px;
-            max-height: 160px;
-        }
+.revEntryImg img {
+    _width: 160px;
+    max-width: 160px;
+    max-height: 160px;
+}
 
-        .revEntryNameLine {
-            padding: 0 0 5px 0;
-        }
+.revEntryNameLine {
+    padding: 0 0 5px 0;
+}
 
-        .revEntryNameLine a {
-            font-size: 110%;
-            font-weight: bold;
-        }
-        /*--------------------------
+.revEntryNameLine a {
+    font-size: 110%;
+    font-weight: bold;
+}
+/*--------------------------
 .revFooterSec
 ----------------------------*/
 
-        .revFooterSec {
-            margin: 0 0 20px 0;
-            border: 1px solid #cccccc;
-        }
+.revFooterSec {
+    margin: 0 0 20px 0;
+    border: 1px solid #cccccc;
+}
 
-        .revFtSecTtl {
-            padding: 10px;
-            font-weight: bold;
-            color: #686868;
-            background: #eeeeee;
-            border-bottom: 1px solid #cccccc;
-        }
+.revFtSecTtl {
+    padding: 10px;
+    font-weight: bold;
+    color: #686868;
+    background: #eeeeee;
+    border-bottom: 1px solid #cccccc;
+}
 
-        .revFtMain {
-            margin: 0 10px 10px;
-            overflow: hidden;
-            zoom: 1;
-            border-bottom: 1px dotted #aeaeae;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/dotted.gif) no-repeat;
-            background-position: right 190px top 0px;
-            background: none\9;
-        }
+.revFtMain {
+    margin: 0 10px 10px;
+    overflow: hidden;
+    zoom: 1;
+    border-bottom: 1px dotted #aeaeae;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/dotted.gif) no-repeat;
+    background-position: right 190px top 0px;
+    background: none\9;
+}
 
-        .revFtMainInr {
-            width: 100%;
-            float: left;
-            margin-right: -210px;
-        }
+.revFtMainInr {
+    width: 100%;
+    float: left;
+    margin-right: -210px;
+}
 
-        .revFtAttention {
-            margin-right: 210px;
-            padding: 0 0 0 10px;
-        }
+.revFtAttention {
+    margin-right: 210px;
+    padding: 0 0 0 10px;
+}
 
-        .revFtSubTtl {
-            padding: 15px 0 10px 0;
-            font-weight: bold;
-            color: #686868;
-        }
+.revFtSubTtl {
+    padding: 15px 0 10px 0;
+    font-weight: bold;
+    color: #686868;
+}
 
-        .revFtAttList {
-            padding: 0 0 8px 15px;
-            background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_dotto.gif) no-repeat 0 3px;
-            line-height: 1.6em;
-        }
+.revFtAttList {
+    padding: 0 0 8px 15px;
+    background: url(http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_dotto.gif) no-repeat 0 3px;
+    line-height: 1.6em;
+}
 
-        .revFtAttLead {
-            padding: 2px 0 10px 0;
-            float: right;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revFtAttLead {
+    padding: 2px 0 10px 0;
+    float: right;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revFtAttLdList {
-            padding: 0 0 0 15px;
-            float: left;
-        }
+.revFtAttLdList {
+    padding: 0 0 0 15px;
+    float: left;
+}
 
-        .revFtSub {
-            width: 146px;
-            padding: 0 17px 15px 18px;
-            float: right;
-            display: block;
-            /*
-  border-left: 1px dotted #aeaeae;
+.revFtSub {
+    width: 146px;
+    padding: 0 17px 15px 18px;
+    float: right;
+    display: block;
+    /*
+border-left: 1px dotted #aeaeae;
 */
-        }
+}
 
-        .revFtSubList {
-            padding: 0 0 10px 0;
-            line-height: 1.6;
-        }
+.revFtSubList {
+    padding: 0 0 10px 0;
+    line-height: 1.6;
+}
 
-        .revFtSubListImg {
-            text-align: center;
-        }
+.revFtSubListImg {
+    text-align: center;
+}
 
-        .revFtLead {
-            padding: 0 0 10px 10px;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revFtLead {
+    padding: 0 0 10px 10px;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revFtLeadList {
-            padding: 0 20px 0 0;
-            float: left;
-        }
+.revFtLeadList {
+    padding: 0 20px 0 0;
+    float: left;
+}
 
-        .revFtBnrBg {
-            padding: 10px 0 10px 5px;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revFtBnrBg {
+    padding: 10px 0 10px 5px;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revFtBnrBgImg {
-            width: 165px;
-            padding: 0 5px;
-            float: left;
-        }
+.revFtBnrBgImg {
+    width: 165px;
+    padding: 0 5px;
+    float: left;
+}
 
-        .revFtBnrSm {
-            padding: 10px 0 10px 5px;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revFtBnrSm {
+    padding: 10px 0 10px 5px;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revFtBnrSmCnt {
-            width: 165px;
-            padding: 0 5px 10px 5px;
-            float: left;
-            overflow: hidden;
-            zoom: 1;
-        }
+.revFtBnrSmCnt {
+    width: 165px;
+    padding: 0 5px 10px 5px;
+    float: left;
+    overflow: hidden;
+    zoom: 1;
+}
 
-        .revFtBnrSmImg {
-            width: 80px;
-            margin: 0 5px 0 0;
-            float: left;
-        }
+.revFtBnrSmImg {
+    width: 80px;
+    margin: 0 5px 0 0;
+    float: left;
+}
 
-        .revFtBnrSmTxt {
-            width: 80px;
-            float: left;
-            line-height: 1.2;
-        }
-        /** サムネイルのCSS　**/
+.revFtBnrSmTxt {
+    width: 80px;
+    float: left;
+    line-height: 1.2;
+}
+/** サムネイルのCSS　**/
 
-        #thumbWindow {
-            display: table-cell;
-            width: 200px;
-            height: 200px;
-            text-align: center;
-            vertical-align: middle;
-        }
+#thumbWindow {
+    display: table-cell;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
 
-        #thumbWindow img {
-            max-width: 180px;
-            max-height: 180px;
-        }
-        /** スライド全体を包むラッパー **/
+#thumbWindow img {
+    max-width: 180px;
+    max-height: 180px;
+}
+/** スライド全体を包むラッパー **/
 
-        .slideWrap {
-            position: relative;
-            height: 64px;
-            margin: 0 auto;
-            clear: both;
-        }
+.slideWrap {
+    position: relative;
+    height: 64px;
+    margin: 0 auto;
+    clear: both;
+}
 
-        .slideWrap .slideLoading {
-            position: absolute;
-            width: 100%;
-            height: 64px;
-            text-align: center;
-            vertical-align: middle;
-            background: #ffffff url('http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/loading_icon.gif') center center no-repeat;
-            z-index: 1;
-        }
-        /** 戻るボタン **/
+.slideWrap .slideLoading {
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    vertical-align: middle;
+    background: #ffffff url('http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/loading_icon.gif') center center no-repeat;
+    z-index: 1;
+}
+/** 戻るボタン **/
 
-        .slideWrap .prevButton {
-            position: absolute;
-            cursor: hand;
-            cursor: pointer;
-            width: 15px;
-            height: 64px;
-            left: 0px;
-            background: url('http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_L.gif') no-repeat 0 0;
-            z-index: 2;
-            text-align: center;
-            line-height: 130px;
-            display: none;
-        }
-        /** 進むボタン **/
+.slideWrap .prevButton {
+    position: absolute;
+    cursor: hand;
+    cursor: pointer;
+    width: 15px;
+    height: 64px;
+    left: 0px;
+    background: url('http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_L.gif') no-repeat 0 0;
+    z-index: 2;
+    text-align: center;
+    line-height: 130px;
+    display: none;
+}
+/** 進むボタン **/
 
-        .slideWrap .nextButton {
-            position: absolute;
-            cursor: hand;
-            cursor: pointer;
-            width: 15px;
-            height: 64px;
-            right: 0px;
-            background: url('http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_R.gif') no-repeat 0 0;
-            z-index: 2;
-            text-align: center;
-            line-height: 130px;
-            display: none;
-        }
-        /** スライドのアイテムを包む枠 **/
+.slideWrap .nextButton {
+    position: absolute;
+    cursor: hand;
+    cursor: pointer;
+    width: 15px;
+    height: 64px;
+    right: 0px;
+    background: url('http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/btn_R.gif') no-repeat 0 0;
+    z-index: 2;
+    text-align: center;
+    line-height: 130px;
+    display: none;
+}
+/** スライドのアイテムを包む枠 **/
 
-        .slideWrap .itemFrame {
-            position: absolute;
-            float: left;
-            width: 100%;
-            overflow: hidden;
-            padding: 0;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-        /** スライドのアイテムが入るボックス（JSからleft値を操作される対象） **/
+.slideWrap .itemFrame {
+    position: absolute;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+/** スライドのアイテムが入るボックス（JSからleft値を操作される対象） **/
 
-        .slideWrap .itemBox {
-            position: relative;
-            width: 10000px;
-            height: 64px;
-            overflow: hidden;
-            /* padding-leftの値は、prevButtonのwidth（+borderなど）+liのmargin-rightと同じにする */
-            padding: 0;
-            margin: 0;
-            -webkit-user-select: none;
-            user-select: none;
-        }
+.slideWrap .itemBox {
+    position: relative;
+    width: 10000px;
+    height: 64px;
+    overflow: hidden;
+    /* padding-leftの値は、prevButtonのwidth（+borderなど）+liのmargin-rightと同じにする */
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
-        .slideWrap .itemBox img {
-            cursor: pointer;
-            vertical-align: middle;
-        }
-        /** スライド1つ **/
+.slideWrap .itemBox img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+/** スライド1つ **/
 
-        .slideWrap .itemFrame li {
-            float: left;
-            width: 65px;
-            height: 65px;
-            /* margin, paddingの値はJSから設定するので0のままにする */
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            text-align: center;
-            vertical-align: middle;
-            background-color: #ffffff;
-            visibility: hidden;
-            display: table-cell;
-            line-height: 65px;
-            position: relative;
-        }
+.slideWrap .itemFrame li {
+    float: left;
+    width: 65px;
+    height: 65px;
+    /* margin, paddingの値はJSから設定するので0のままにする */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ffffff;
+    visibility: hidden;
+    display: table-cell;
+    line-height: 65px;
+    position: relative;
+}
 
-        .slideWrap .itemFrame li img {
-            max-width: 65px;
-            max-height: 65px;
-            _width: 65px;
-            _height: 65px;
-        }
+.slideWrap .itemFrame li img {
+    max-width: 65px;
+    max-height: 65px;
+    _width: 65px;
+    _height: 65px;
+}
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
-        #revEntryImgPopUpBg {
-            display: none;
-            position: fixed;
-            z-index: 530000;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-            background-color: #000000;
-            opacity: 0.5;
-            /* IE8 */
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-            /* IE6,7 */
-            filter: alpha(opacity=50);
-        }
+#revEntryImgPopUpBg {
+    display: none;
+    position: fixed;
+    z-index: 530000;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #000000;
+    opacity: 0.5;
+    /* IE8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE6,7 */
+    filter: alpha(opacity=50);
+}
 
-        #revEntryImgPopUp {
-            display: none;
-            position: fixed;
-            z-index: 530001;
-            _position: absolute;
-            width: 510px;
-            height: 600px;
-            background-color: #ffffff;
-            margin-top: -285px;
-            margin-left: -255px;
-            top: 50%;
-            left: 50%;
-            _border: 1px solid #cccccc;
-            /* IE6 */
-        }
+#revEntryImgPopUp {
+    display: none;
+    position: fixed;
+    z-index: 530001;
+    _position: absolute;
+    width: 510px;
+    height: 600px;
+    background-color: #ffffff;
+    margin-top: -285px;
+    margin-left: -255px;
+    top: 50%;
+    left: 50%;
+    _border: 1px solid #cccccc;
+    /* IE6 */
+}
 
-        #revEntryImgPopUp #revPopUpCloseButton {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            cursor: pointer;
-        }
+#revEntryImgPopUp #revPopUpCloseButton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
 
-        #revEntryImgPopUp #revPopUpThumbs {
-            width: 100%;
-            _zoom: 1;
-        }
+#revEntryImgPopUp #revPopUpThumbs {
+    width: 100%;
+    _zoom: 1;
+}
 
-        #revEntryImgPopUp .revPopUpThumbsList {
-            position: relative;
-            display: none;
-            float: left;
-            cursor: pointer;
-            width: 80px;
-            height: 80px;
-            text-align: center;
-            padding: 10px;
-            margin: 0px 0px 0px 20px;
-            _margin-left: 10px;
-            border: 1px solid #ffffff;
-            vertical-align: middle;
-        }
+#revEntryImgPopUp .revPopUpThumbsList {
+    position: relative;
+    display: none;
+    float: left;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 0px 0px 20px;
+    _margin-left: 10px;
+    border: 1px solid #ffffff;
+    vertical-align: middle;
+}
 
-        #revEntryImgPopUp .revPopUpThumbsList .revEntryImgMovieIcon {
-            display: none;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            background: url("http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_movie.png") center center no-repeat;
-        }
+#revEntryImgPopUp .revPopUpThumbsList .revEntryImgMovieIcon {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_movie.png") center center no-repeat;
+}
 
-        #revEntryImgPopUp .revPopUpThumbsList.active {
-            border: 1px solid #cccccc;
-            background: #efefef;
-        }
+#revEntryImgPopUp .revPopUpThumbsList.active {
+    border: 1px solid #cccccc;
+    background: #efefef;
+}
 
-        #revEntryImgPopUp .revPopUpThumbsList.movie .revEntryImgMovieIcon {
-            display: block;
-        }
+#revEntryImgPopUp .revPopUpThumbsList.movie .revEntryImgMovieIcon {
+    display: block;
+}
 
-        #revEntryImgPopUp .revPopUpThumbsList img {
-            position: absolute;
-            max-height: 80px;
-            max-width: 80px;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            vertical-align: middle;
-            *position: static;
-            *top: auto;
-            *bottom: auto;
-            *left: auto;
-            *right: auto;
-        }
+#revEntryImgPopUp .revPopUpThumbsList img {
+    position: absolute;
+    max-height: 80px;
+    max-width: 80px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    vertical-align: middle;
+    *position: static;
+    *top: auto;
+    *bottom: auto;
+    *left: auto;
+    *right: auto;
+}
 
-        #revEntryImgPopUp #revPopUpLargeArea {
-            display: table;
-            width: 100%;
-            height: 470px;
-        }
+#revEntryImgPopUp #revPopUpLargeArea {
+    display: table;
+    width: 100%;
+    height: 470px;
+}
 
-        #revEntryImgPopUp #revPopUpLargeMovie {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
+#revEntryImgPopUp #revPopUpLargeMovie {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 
-        #revEntryImgPopUp #revPopUpLargeMovie object {
-            *margin-top: 100px;
-        }
+#revEntryImgPopUp #revPopUpLargeMovie object {
+    *margin-top: 100px;
+}
 
-        #revEntryImgPopUp #revPopUpLargeImage {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-            height: 100%;
-            _padding-top: 30px;
-            /* IE6 */
-        }
+#revEntryImgPopUp #revPopUpLargeImage {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    _padding-top: 30px;
+    /* IE6 */
+}
 
-        #revEntryImgPopUp #revPopUpLargeImage img {
-            max-width: 430px;
-            max-height: 430px;
-            _height: 430px;
-        }
-        /** Ranking Parts **/
+#revEntryImgPopUp #revPopUpLargeImage img {
+    max-width: 430px;
+    max-height: 430px;
+    _height: 430px;
+}
+/** Ranking Parts **/
 
-        .rnkGenreName {
-            width: 600px;
-        }
-        /*
- .revNtPtSec
+.rnkGenreName {
+    width: 600px;
+}
+/*
+.revNtPtSec
 -------------------------------------------------------------------------*/
 
-        .revNtPtSec {
-            overflow: hidden;
-        }
+.revNtPtSec {
+    overflow: hidden;
+}
 
-        .revNtPtGdClum {
-            float: left;
-            width: 49%;
-        }
+.revNtPtGdClum {
+    float: left;
+    width: 49%;
+}
 
-        .revNtPtBdClum {
-            float: right;
-            width: 49%;
-        }
+.revNtPtBdClum {
+    float: right;
+    width: 49%;
+}
 
-        .revNtPtTtl {
-            line-height: 41px;
-            font-size: 120%;
-            padding-left: 36px;
-            margin-bottom: 10px;
-        }
+.revNtPtTtl {
+    line-height: 41px;
+    font-size: 120%;
+    padding-left: 36px;
+    margin-bottom: 10px;
+}
 
-        .revNtPtBdClum .revNtPtTtl {
-            background: #F2F2F2 url("http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_negative.gif") no-repeat 10px 9px;
-        }
+.revNtPtBdClum .revNtPtTtl {
+    background: #F2F2F2 url("http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_negative.gif") no-repeat 10px 9px;
+}
 
-        .revNtPtGdClum .revNtPtTtl {
-            background: #F2F2F2 url("http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_positive.gif") no-repeat 10px 9px;
-        }
+.revNtPtGdClum .revNtPtTtl {
+    background: #F2F2F2 url("http://a.ichiba.jp.rakuten-static.com/com/img/review/share/201403/icon_positive.gif") no-repeat 10px 9px;
+}
 
-        .revNtPtCnt {
-            margin: 0 10px 30px;
-        }
+.revNtPtCnt {
+    margin: 0 10px 30px;
+}
 
-        .revNtPtCntHead {
-            margin: 0 0 20px;
-            overflow: hidden;
-        }
+.revNtPtCntHead {
+    margin: 0 0 20px;
+    overflow: hidden;
+}
 
-        .revNtPtStar {
-            float: left;
-        }
+.revNtPtStar {
+    float: left;
+}
 
-        .revNtPtStarNum {
-            padding: 0 0 0 5px;
-            font-weight: bold;
-            color: #f8ae4b;
-        }
+.revNtPtStarNum {
+    padding: 0 0 0 5px;
+    font-weight: bold;
+    color: #f8ae4b;
+}
 
-        .revNtPtDate {
-            float: right;
-        }
+.revNtPtDate {
+    float: right;
+}
 
-        .revNtPtRevTtl {
-            font-size: 110%;
-            font-weight: bold;
-            color: #686868;
-            margin-bottom: 10px;
-        }
+.revNtPtRevTtl {
+    font-size: 110%;
+    font-weight: bold;
+    color: #686868;
+    margin-bottom: 10px;
+}
 
-        .revNtPtRevCmt {
-            margin: 0 0 5px;
-            line-height: 1.6em;
-        }
+.revNtPtRevCmt {
+    margin: 0 0 5px;
+    line-height: 1.6em;
+}
 
-        .revNtPtRevAns {
-            font-size: 82%;
-        }
+.revNtPtRevAns {
+    font-size: 82%;
+}
 
-        .revNtPtRevAns span {
-            font-size: 150%;
-            color: #bf0000;
-            font-weight: bold;
-        }
+.revNtPtRevAns span {
+    font-size: 150%;
+    color: #bf0000;
+    font-weight: bold;
+}
 
-        .revNtPtRevName {
-            margin: 20px 0 10px;
-        }
+.revNtPtRevName {
+    margin: 20px 0 10px;
+}
 
-        .revNtPtRevDtlTxt {
-            font-size: 82%;
-            padding: 3px 0 0 0;
-            float: left;
-        }
+.revNtPtRevDtlTxt {
+    font-size: 82%;
+    padding: 3px 0 0 0;
+    float: left;
+}
 
-        .revNtPtRevDtl {
-            overflow: hidden;
-        }
+.revNtPtRevDtl {
+    overflow: hidden;
+}
 
-        .revNtPtRevDtlTxt span {
-            margin-right: 5px;
-        }
+.revNtPtRevDtlTxt span {
+    margin-right: 5px;
+}
 
-        .revNtPtRevDtlIcon {
-            width: 29px;
-            height: 15px;
-            float: left;
-            margin-right: 10px;
-        }
+.revNtPtRevDtlIcon {
+    width: 29px;
+    height: 15px;
+    float: left;
+    margin-right: 10px;
+}
 
-        .revNtPtRevDtlIcon img {
-            vertical-align: top;
-        }
+.revNtPtRevDtlIcon img {
+    vertical-align: top;
+}
