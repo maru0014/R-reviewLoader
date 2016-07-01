@@ -1819,3 +1819,6 @@ html, body {
 .revNtPtRevDtlIcon img {
     vertical-align: top;
 }
+.revNotFound {
+  display: none;
+}
