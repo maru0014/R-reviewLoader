@@ -2,7 +2,9 @@ body {
     font-size: 0.8em;
     border: 1px #ccc solid;
 }
-
+ul li{
+  list-style: none;
+}
 /*レビューリンク*/
 
 dd.revRvwUserEntryOther {
