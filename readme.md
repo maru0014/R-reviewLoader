@@ -37,7 +37,7 @@
 PC用販売説明文へ
 
 ```html
-<iframe src="http://www.rakuten.ne.jp/gold/ショップ名/r-reviewLoader/" width="600" height="600" frameborder="0"></iframe>
+<iframe src="http://www.rakuten.ne.jp/gold/ショップ名/r-reviewLoader/" width="100%" height="600" frameborder="0"></iframe>
 ```
 
 などと記述すればOK。
